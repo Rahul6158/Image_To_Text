@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 import pytesseract
 
+pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files\Tesseract-OCR'
+
 def ocr_core(img):
     text = pytesseract.image_to_string(img)
     return text
